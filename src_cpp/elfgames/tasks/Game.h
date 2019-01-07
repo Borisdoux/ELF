@@ -614,19 +614,21 @@ class StateForChouFleur : public State {
    }
     playMove(move);
     updatePossibleMoves(move);
+
    if(_status == 1 ){
    
     if(won(White))
-      _status=4;
+      _status=3;
     else
       _status=0;
    }
    else{
      if(won(Black))
-      _status=3;
+      _status=4;
     else
       _status=1;
   }
+  findActions ();
   findFeatures ();
   _hash = hash;
 
