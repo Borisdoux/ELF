@@ -16,7 +16,7 @@ from rlpytorch import Model
 from elfgames.go.mcts_prediction import MCTSPrediction
 from elfgames.go.multiple_prediction import MultiplePrediction
 
-OUTSIZE = 2
+OUTSIZE = 18*18*4 # action space size
 
 class Block(Model):
     @classmethod
