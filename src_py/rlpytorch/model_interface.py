@@ -224,13 +224,13 @@ class ModelInterface(object):
             dst_key(str): destination key in ``self.models``
             src_key(str): source key in ``self.models``
         '''
-
+        print("star copy")
         assert dst_key in self.models, \
             f'ModelInterface: dst_key = {dst_key} cannot be found'
         assert src_key in self.models, \
             f'ModelInterface: src_key = {src_key} cannot be found'
         self.update_model(dst_key, self.models[src_key].clone())
-
+        print("end copy")
     ''' Usage:
         record = interface(input)
         Then record["Q"] will be the Q-function given the input.
