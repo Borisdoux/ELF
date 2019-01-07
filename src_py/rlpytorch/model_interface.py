@@ -112,6 +112,7 @@ class ModelInterface(object):
             gpu_id=None,
             opt=False,
             params={}):
+        print("start add model")
         '''Add a model to `ModelInterface`.
 
         Args:
@@ -176,6 +177,7 @@ class ModelInterface(object):
                 raise ValueError(
                     "Optimization method %s is not supported! " %
                     params["opt_method"])
+        print("end add model")
 
         return True
 
